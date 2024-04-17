@@ -1,0 +1,15 @@
+@import './variable';
+
+
+.button{
+    border: none;
+    padding: 10px 22px 10px 22px;
+    background-color: $button-color;
+    border-radius: 5px;
+    color: $text-color;
+    font-family: $button-font-text;
+    line-height: $button-line;
+    font-size: $button-size-text;
+    box-shadow: rgba(255, 83, 0, 0.4) $button-color;
+    
+}
