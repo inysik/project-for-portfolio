@@ -3,18 +3,26 @@
 
 
 $button-color: rgba(255, 83, 0, 0.9);
-$button-font-text: Poppins;
-$size-text: 20px;
-$button-line: 30px;
-$colorWhite: #FFFFFF;
-$font-text: Work Sans;
 $colorRed: rgba(255, 83, 0, 1);
 $colorBlack: black;
+$colorWhite: #FFFFFF;
 
+
+$button-font-text: Poppins;
+$font-text: Work Sans;
+
+$font-weight500: 500;
+$font-weight600: 600;
+
+//  параметры для десктопа 
+$size-text: 20px;
+$button-line: 30px;
+$line-height:25px;
 // параметры для планшета
 
 $fontSizeTablet: 16px;
 $lineHeigthTablet: 24px;
+
 
 
 @mixin flex($justifyContent: center, $alignItems: center) {

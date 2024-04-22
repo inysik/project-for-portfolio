@@ -25,13 +25,21 @@ li {
 
 }
 
+//desctop
+
 @media (min-width: 768px) and (max-width:1440px) {
     .navigation {
         @include flex(space-around, center);
         height: 100px;
+        width: 100%;
+        padding-left: 135px;
+        padding-left: 135px;
+        background-color: $colorWhite;
+        box-shadow: 0px 1px 10px 0px rgba(0, 0, 0, 0.1);
+
     }
 
-    .navigation-logo {
+    .navigation__logo {
         display: flex;
         font-family: $font-text;
         font-weight: 600;
@@ -52,15 +60,14 @@ li {
 
     }
 
-    .navigation-list {
+    .navigation__list {
         @include flex;
-        gap: 38px;
-        // margin-right: 215px;
-        // margin-left: 77px;
+        gap: 40px;
+        
     }
 
-    .navigation-list_item {
-        line-height: 25px;
+    .navigation__list_item {
+        line-height: $line-height;
         font-weight: 500;
         color: $colorBlack;
         font-family: $font-text;
@@ -77,22 +84,30 @@ li {
     .burger-menu {
         display: none;
     }
+    li{
+        flex-shrink: 0;
+    }
 }
+
+//tablet
 
 @media (min-width: 376px) and (max-width:768px) {
     .navigation {
         @include flex(space-around, center);
         height: 80px;
-        gap: 30px;
-        margin: 40px;
+        gap: 28px;
+        padding: 28px 28px 28px 40px;
+        width: 100%;
+        background-color: $colorWhite;
+        box-shadow: 0px 1px 10px 0px rgba(0, 0, 0, 0.1);
     }
 
-    .navigation-logo {
+    .navigation__logo {
         display: flex;
         font-family: $font-text;
-        font-weight: 600;
-        font-size: 20px;
-        line-height: 24px;
+        font-weight: $font-weight600;
+        font-size: $fontSizeTablet;
+        line-height: $lineHeigthTablet;
 
         &_red {
             color: $colorRed;
@@ -108,20 +123,20 @@ li {
 
     }
 
-    .navigation-list {
+    .navigation__list {
         @include flex;
         gap: 28px;
 
     }
 
-    .navigation-list_item {
+    .navigation__list_item {
         line-height: $lineHeigthTablet;
         font-size: $fontSizeTablet;
-        font-weight: 500;
+        font-weight: $font-weight500;
         color: $colorBlack;
         font-family: $font-text;
-        font-size: $size-text;
-
+        
+       
     }
 
     .toggle {
@@ -132,29 +147,36 @@ li {
     .burger-menu {
         display: none;
     }
-
-
+    li{
+        flex-shrink: 0;
+    }
+    
 }
+
+//mobil
 
 @media (max-width: 376px) {
     .navigation {
         height: 50px;
         @include flex(space-between, center);
         margin: 13px;
+        width: 100%;
+        background-color: $colorWhite;
+        box-shadow: 0px 1px 10px 0px rgba(0, 0, 0, 0.1);
     }
 
     .burger-menu {
         display: block;
     }
 
-    .navigation-list {
+    .navigation__list {
         display: none;
     }
 
-    .navigation-logo {
+    .navigation__logo {
         display: flex;
         font-family: $font-text;
-        font-weight: 500;
+        font-weight: $font-weight500;
         font-size: 25px;
         line-height: 30px;
 
