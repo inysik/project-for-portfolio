@@ -1,15 +1,186 @@
 @import './variable';
 
+* {
+    margin: 0;
+    padding: 0;
+}
 
-.button{
+a,
+li {
+    all: unset;
+    // background-color: aqua;
+
+}
+
+.button {
     border: none;
     padding: 10px 22px 10px 22px;
     background-color: $button-color;
     border-radius: 5px;
-    color: $text-color;
+    color: $colorWhite;
     font-family: $button-font-text;
     line-height: $button-line;
-    font-size: $button-size-text;
+    font-size: $size-text;
     box-shadow: rgba(255, 83, 0, 0.4) $button-color;
-    
+
+}
+
+@media (min-width: 768px) and (max-width:1440px) {
+    .navigation {
+        @include flex(space-around, center);
+        height: 100px;
+    }
+
+    .navigation-logo {
+        display: flex;
+        font-family: $font-text;
+        font-weight: 600;
+        font-size: 40px;
+        line-height: 49px;
+
+        &_red {
+            color: $colorRed;
+        }
+
+        ;
+
+        &_black {
+            color: $colorBlack;
+        }
+
+        ;
+
+    }
+
+    .navigation-list {
+        @include flex;
+        gap: 38px;
+        // margin-right: 215px;
+        // margin-left: 77px;
+    }
+
+    .navigation-list_item {
+        line-height: 25px;
+        font-weight: 500;
+        color: $colorBlack;
+        font-family: $font-text;
+        font-size: $size-text;
+
+    }
+
+    .toggle {
+        border: none;
+        background-color: $colorWhite;
+
+    }
+
+    .burger-menu {
+        display: none;
+    }
+}
+
+@media (min-width: 376px) and (max-width:768px) {
+    .navigation {
+        @include flex(space-around, center);
+        height: 80px;
+        gap: 30px;
+        margin: 40px;
+    }
+
+    .navigation-logo {
+        display: flex;
+        font-family: $font-text;
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 24px;
+
+        &_red {
+            color: $colorRed;
+        }
+
+        ;
+
+        &_black {
+            color: $colorBlack;
+        }
+
+        ;
+
+    }
+
+    .navigation-list {
+        @include flex;
+        gap: 28px;
+
+    }
+
+    .navigation-list_item {
+        line-height: $lineHeigthTablet;
+        font-size: $fontSizeTablet;
+        font-weight: 500;
+        color: $colorBlack;
+        font-family: $font-text;
+        font-size: $size-text;
+
+    }
+
+    .toggle {
+        border: none;
+        background-color: $colorWhite;
+    }
+
+    .burger-menu {
+        display: none;
+    }
+
+
+}
+
+@media (max-width: 376px) {
+    .navigation {
+        height: 50px;
+        @include flex(space-between, center);
+        margin: 13px;
+    }
+
+    .burger-menu {
+        display: block;
+    }
+
+    .navigation-list {
+        display: none;
+    }
+
+    .navigation-logo {
+        display: flex;
+        font-family: $font-text;
+        font-weight: 500;
+        font-size: 25px;
+        line-height: 30px;
+
+        &_red {
+            color: $colorRed;
+        }
+
+        ;
+
+        &_black {
+            color: $colorBlack;
+        }
+
+        ;
+
+        .toggle,
+        .burger-menu {
+            border: none;
+            background-color: $colorWhite;
+            
+        }
+
+    }
+
+    button,
+    svg {
+        @include button-reset
+    }
 }
