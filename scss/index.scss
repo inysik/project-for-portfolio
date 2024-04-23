@@ -15,13 +15,13 @@ li {
 .button {
     border: none;
     padding: 10px 22px 10px 22px;
-    background-color: $button-color;
+    background-color: $buttonColor;
     border-radius: 5px;
     color: $colorWhite;
-    font-family: $button-font-text;
-    line-height: $button-line;
-    font-size: $size-text;
-    box-shadow: rgba(255, 83, 0, 0.4) $button-color;
+    font-family: $buttonFontText;
+    line-height: $lineDec;
+    font-size: $sizeTextDec;
+    box-shadow: rgba(255, 83, 0, 0.4) $buttonColor;
 
 }
 
@@ -39,10 +39,10 @@ li {
 
         &__logo {
             display: flex;
-            font-family: $font-text;
-            font-weight: $font-weight600;
-            font-size: 40px;
-            line-height: 49px;
+            font-family: $fontText;
+            font-weight: $fontWeight600;
+            font-size: $fontSizeLogo;
+            line-height: $lineHeightLogo;
 
             &_red {
                 color: $colorRed;
@@ -65,11 +65,11 @@ li {
         }
 
         &__list-item {
-            line-height: $line-height;
-            font-weight: $font-weight500;
+            line-height: $lineHeightDec;
+            font-weight: $fontWeight500;
             color: $colorBlack;
-            font-family: $font-text;
-            font-size: $size-text;
+            font-family: $fontText;
+            font-size: $sizeTextDec;
 
         }
     }
@@ -103,8 +103,8 @@ li {
 
         &__logo {
             display: flex;
-            font-family: $font-text;
-            font-weight: $font-weight600;
+            font-family: $fontText;
+            font-weight: $fontWeight600;
             font-size: $fontSizeTablet;
             line-height: $lineHeigthTablet;
 
@@ -131,9 +131,9 @@ li {
         &__list-item {
             line-height: $lineHeigthTablet;
             font-size: $fontSizeTablet;
-            font-weight: $font-weight500;
+            font-weight: $fontWeight500;
             color: $colorBlack;
-            font-family: $font-text;
+            font-family: $fontText;
 
         }
     }
@@ -172,8 +172,8 @@ li {
 
         &__logo {
             display: flex;
-            font-family: $font-text;
-            font-weight: $font-weight500;
+            font-family: $fontText;
+            font-weight: $fontWeight500;
             font-size: $fontSizeMobil;
             line-height: $lineHeightMobil;
 
