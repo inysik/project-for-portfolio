@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=DM+Serif+Display&family=Jost&family=Pacifico&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@1,300;1,400&family=Roboto:ital,wght@0,100;1,300&family=Seymour+One&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+
+$buttonColor: rgba(255, 83, 0, 0.9);
+$colorRed: rgba(255, 83, 0, 1);
+$colorBlack: rgb(0, 0, 0);
+$colorWhite: rgb(255, 255, 255);
+
+
+
+$buttonFontText: Poppins;
+$fontText: Work Sans;
+
+$fontWeight500: 500;
+$fontWeight600: 600;
+
+//  параметры для десктопа 
+
+$sizeTextDec: 20px;
+$lineDec: 30px;
+$lineHeightDec:25px;
+
+// параметры для планшета
+
+$fontSizeTablet: 16px;
+$lineHeigthTablet: 24px;
+
+//параметры для телефона
+
+$fontSizeMobil: 25px;
+$lineHeightMobil: 30px;
+
+//для логотипа
+
+$fontSizeLogo: 40px;
+$lineHeightLogo: 49px;
+
+
+
+
+@mixin flex($justifyContent: center, $alignItems: center) {
+  display: flex;
+  justify-content: $justifyContent;
+  align-items: $alignItems;
+
+}
+
+@mixin button-reset {
+  padding: 0;
+  border: none;
+  font: inherit;
+  color: inherit;
+  background-color: transparent;
+  cursor: pointer;
+}

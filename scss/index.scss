@@ -1,0 +1,210 @@
+@import './variable';
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+a,
+li {
+    all: unset;
+    // background-color: aqua;
+
+}
+
+.button {
+    border: none;
+    padding: 10px 22px 10px 22px;
+    background-color: $buttonColor;
+    border-radius: 5px;
+    color: $colorWhite;
+    font-family: $buttonFontText;
+    line-height: $lineDec;
+    font-size: $sizeTextDec;
+    box-shadow: rgba(255, 83, 0, 0.4) $buttonColor;
+
+}
+
+//desctop
+
+@media (min-width: 768px) and (max-width:1440px) {
+    .navigation {
+        @include flex(space-around, center);
+        height: 100px;
+        width: 100%;
+        padding-left: 135px;
+        padding-left: 135px;
+        background-color: $colorWhite;
+        box-shadow: 0px 1px 10px 0px rgba(0, 0, 0, 0.1);
+
+        &__logo {
+            display: flex;
+            font-family: $fontText;
+            font-weight: $fontWeight600;
+            font-size: $fontSizeLogo;
+            line-height: $lineHeightLogo;
+
+            &_red {
+                color: $colorRed;
+            }
+
+            ;
+
+            &_black {
+                color: $colorBlack;
+            }
+
+            ;
+
+        }
+
+        &__list {
+            @include flex;
+            gap: 40px;
+
+        }
+
+        &__list-item {
+            line-height: $lineHeightDec;
+            font-weight: $fontWeight500;
+            color: $colorBlack;
+            font-family: $fontText;
+            font-size: $sizeTextDec;
+
+        }
+    }
+
+    .toggle {
+        border: none;
+        background-color: $colorWhite;
+
+    }
+
+    .burger-menu {
+        display: none;
+    }
+
+    li {
+        flex-shrink: 0;
+    }
+}
+
+//tablet
+
+@media (min-width: 376px) and (max-width:768px) {
+    .navigation {
+        @include flex(space-around, center);
+        height: 80px;
+        gap: 28px;
+        padding: 28px 28px 28px 40px;
+        width: 100%;
+        background-color: $colorWhite;
+        box-shadow: 0px 1px 10px 0px rgba(0, 0, 0, 0.1);
+
+        &__logo {
+            display: flex;
+            font-family: $fontText;
+            font-weight: $fontWeight600;
+            font-size: $fontSizeTablet;
+            line-height: $lineHeigthTablet;
+
+            &_red {
+                color: $colorRed;
+            }
+
+            ;
+
+            &_black {
+                color: $colorBlack;
+            }
+
+            ;
+
+        }
+
+        &__list {
+            @include flex;
+            gap: 28px;
+
+        }
+
+        &__list-item {
+            line-height: $lineHeigthTablet;
+            font-size: $fontSizeTablet;
+            font-weight: $fontWeight500;
+            color: $colorBlack;
+            font-family: $fontText;
+
+        }
+    }
+
+    .toggle {
+        border: none;
+        background-color: $colorWhite;
+    }
+
+    .burger-menu {
+        display: none;
+    }
+
+    li {
+        flex-shrink: 0;
+    }
+
+}
+
+//mobil
+
+@media (max-width: 376px) {
+    .navigation {
+        height: 50px;
+        @include flex(space-between, center);
+        margin: 13px;
+        width: 100%;
+        background-color: $colorWhite;
+        box-shadow: 0px 1px 10px 0px rgba(0, 0, 0, 0.1);
+
+
+
+        &__list {
+            display: none;
+        }
+
+        &__logo {
+            display: flex;
+            font-family: $fontText;
+            font-weight: $fontWeight500;
+            font-size: $fontSizeMobil;
+            line-height: $lineHeightMobil;
+
+
+            &_red {
+                color: $colorRed;
+            }
+
+            ;
+
+            &_black {
+                color: $colorBlack;
+            }
+        }
+
+        ;
+    }
+
+    .toggle,
+    .burger-menu {
+        border: none;
+        background-color: $colorWhite;
+
+    }
+
+
+    .burger-menu {
+        display: block;
+    }
+
+    button {
+        @include button-reset
+    }
+}
