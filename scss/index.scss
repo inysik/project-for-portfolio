@@ -37,42 +37,41 @@ li {
         background-color: $colorWhite;
         box-shadow: 0px 1px 10px 0px rgba(0, 0, 0, 0.1);
 
-    }
+        &__logo {
+            display: flex;
+            font-family: $font-text;
+            font-weight: $font-weight600;
+            font-size: 40px;
+            line-height: 49px;
 
-    .navigation__logo {
-        display: flex;
-        font-family: $font-text;
-        font-weight: 600;
-        font-size: 40px;
-        line-height: 49px;
+            &_red {
+                color: $colorRed;
+            }
 
-        &_red {
-            color: $colorRed;
+            ;
+
+            &_black {
+                color: $colorBlack;
+            }
+
+            ;
+
         }
 
-        ;
+        &__list {
+            @include flex;
+            gap: 40px;
 
-        &_black {
+        }
+
+        &__list-item {
+            line-height: $line-height;
+            font-weight: $font-weight500;
             color: $colorBlack;
+            font-family: $font-text;
+            font-size: $size-text;
+
         }
-
-        ;
-
-    }
-
-    .navigation__list {
-        @include flex;
-        gap: 40px;
-        
-    }
-
-    .navigation__list_item {
-        line-height: $line-height;
-        font-weight: 500;
-        color: $colorBlack;
-        font-family: $font-text;
-        font-size: $size-text;
-
     }
 
     .toggle {
@@ -84,7 +83,8 @@ li {
     .burger-menu {
         display: none;
     }
-    li{
+
+    li {
         flex-shrink: 0;
     }
 }
@@ -100,43 +100,42 @@ li {
         width: 100%;
         background-color: $colorWhite;
         box-shadow: 0px 1px 10px 0px rgba(0, 0, 0, 0.1);
-    }
 
-    .navigation__logo {
-        display: flex;
-        font-family: $font-text;
-        font-weight: $font-weight600;
-        font-size: $fontSizeTablet;
-        line-height: $lineHeigthTablet;
+        &__logo {
+            display: flex;
+            font-family: $font-text;
+            font-weight: $font-weight600;
+            font-size: $fontSizeTablet;
+            line-height: $lineHeigthTablet;
 
-        &_red {
-            color: $colorRed;
+            &_red {
+                color: $colorRed;
+            }
+
+            ;
+
+            &_black {
+                color: $colorBlack;
+            }
+
+            ;
+
         }
 
-        ;
+        &__list {
+            @include flex;
+            gap: 28px;
 
-        &_black {
+        }
+
+        &__list-item {
+            line-height: $lineHeigthTablet;
+            font-size: $fontSizeTablet;
+            font-weight: $font-weight500;
             color: $colorBlack;
+            font-family: $font-text;
+
         }
-
-        ;
-
-    }
-
-    .navigation__list {
-        @include flex;
-        gap: 28px;
-
-    }
-
-    .navigation__list_item {
-        line-height: $lineHeigthTablet;
-        font-size: $fontSizeTablet;
-        font-weight: $font-weight500;
-        color: $colorBlack;
-        font-family: $font-text;
-        
-       
     }
 
     .toggle {
@@ -147,10 +146,11 @@ li {
     .burger-menu {
         display: none;
     }
-    li{
+
+    li {
         flex-shrink: 0;
     }
-    
+
 }
 
 //mobil
@@ -163,46 +163,48 @@ li {
         width: 100%;
         background-color: $colorWhite;
         box-shadow: 0px 1px 10px 0px rgba(0, 0, 0, 0.1);
+
+
+
+        &__list {
+            display: none;
+        }
+
+        &__logo {
+            display: flex;
+            font-family: $font-text;
+            font-weight: $font-weight500;
+            font-size: $fontSizeMobil;
+            line-height: $lineHeightMobil;
+
+
+            &_red {
+                color: $colorRed;
+            }
+
+            ;
+
+            &_black {
+                color: $colorBlack;
+            }
+        }
+
+        ;
     }
+
+    .toggle,
+    .burger-menu {
+        border: none;
+        background-color: $colorWhite;
+
+    }
+
 
     .burger-menu {
         display: block;
     }
 
-    .navigation__list {
-        display: none;
-    }
-
-    .navigation__logo {
-        display: flex;
-        font-family: $font-text;
-        font-weight: $font-weight500;
-        font-size: 25px;
-        line-height: 30px;
-
-        &_red {
-            color: $colorRed;
-        }
-
-        ;
-
-        &_black {
-            color: $colorBlack;
-        }
-
-        ;
-
-        .toggle,
-        .burger-menu {
-            border: none;
-            background-color: $colorWhite;
-            
-        }
-
-    }
-
-    button,
-    svg {
+    button {
         @include button-reset
     }
 }

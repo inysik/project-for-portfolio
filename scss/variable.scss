@@ -4,8 +4,9 @@
 
 $button-color: rgba(255, 83, 0, 0.9);
 $colorRed: rgba(255, 83, 0, 1);
-$colorBlack: black;
-$colorWhite: #FFFFFF;
+$colorBlack: rgb(0, 0, 0);
+$colorWhite: rgb(255, 255, 255);
+
 
 
 $button-font-text: Poppins;
@@ -15,13 +16,20 @@ $font-weight500: 500;
 $font-weight600: 600;
 
 //  параметры для десктопа 
+
 $size-text: 20px;
 $button-line: 30px;
 $line-height:25px;
+
 // параметры для планшета
 
 $fontSizeTablet: 16px;
 $lineHeigthTablet: 24px;
+
+//параметры для телефона
+
+$fontSizeMobil: 25px;
+$lineHeightMobil: 30px;
 
 
 

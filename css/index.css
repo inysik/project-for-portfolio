@@ -14,7 +14,7 @@ li {
   padding: 10px 22px 10px 22px;
   background-color: rgba(255, 83, 0, 0.9);
   border-radius: 5px;
-  color: #FFFFFF;
+  color: rgb(255, 255, 255);
   font-family: Poppins;
   line-height: 30px;
   font-size: 20px;
@@ -30,7 +30,7 @@ li {
     width: 100%;
     padding-left: 135px;
     padding-left: 135px;
-    background-color: #FFFFFF;
+    background-color: rgb(255, 255, 255);
     box-shadow: 0px 1px 10px 0px rgba(0, 0, 0, 0.1);
   }
   .navigation__logo {
@@ -44,7 +44,7 @@ li {
     color: rgb(255, 83, 0);
   }
   .navigation__logo_black {
-    color: black;
+    color: rgb(0, 0, 0);
   }
   .navigation__list {
     display: flex;
@@ -52,16 +52,16 @@ li {
     align-items: center;
     gap: 40px;
   }
-  .navigation__list_item {
+  .navigation__list-item {
     line-height: 25px;
     font-weight: 500;
-    color: black;
+    color: rgb(0, 0, 0);
     font-family: Work Sans;
     font-size: 20px;
   }
   .toggle {
     border: none;
-    background-color: #FFFFFF;
+    background-color: rgb(255, 255, 255);
   }
   .burger-menu {
     display: none;
@@ -79,7 +79,7 @@ li {
     gap: 28px;
     padding: 28px 28px 28px 40px;
     width: 100%;
-    background-color: #FFFFFF;
+    background-color: rgb(255, 255, 255);
     box-shadow: 0px 1px 10px 0px rgba(0, 0, 0, 0.1);
   }
   .navigation__logo {
@@ -93,7 +93,7 @@ li {
     color: rgb(255, 83, 0);
   }
   .navigation__logo_black {
-    color: black;
+    color: rgb(0, 0, 0);
   }
   .navigation__list {
     display: flex;
@@ -101,16 +101,16 @@ li {
     align-items: center;
     gap: 28px;
   }
-  .navigation__list_item {
+  .navigation__list-item {
     line-height: 24px;
     font-size: 16px;
     font-weight: 500;
-    color: black;
+    color: rgb(0, 0, 0);
     font-family: Work Sans;
   }
   .toggle {
     border: none;
-    background-color: #FFFFFF;
+    background-color: rgb(255, 255, 255);
   }
   .burger-menu {
     display: none;
@@ -127,11 +127,8 @@ li {
     align-items: center;
     margin: 13px;
     width: 100%;
-    background-color: #FFFFFF;
+    background-color: rgb(255, 255, 255);
     box-shadow: 0px 1px 10px 0px rgba(0, 0, 0, 0.1);
-  }
-  .burger-menu {
-    display: block;
   }
   .navigation__list {
     display: none;
@@ -147,15 +144,17 @@ li {
     color: rgb(255, 83, 0);
   }
   .navigation__logo_black {
-    color: black;
+    color: rgb(0, 0, 0);
   }
-  .navigation__logo .toggle,
-  .navigation__logo .burger-menu {
+  .toggle,
+  .burger-menu {
     border: none;
-    background-color: #FFFFFF;
+    background-color: rgb(255, 255, 255);
   }
-  button,
-  svg {
+  .burger-menu {
+    display: block;
+  }
+  button {
     padding: 0;
     border: none;
     font: inherit;
