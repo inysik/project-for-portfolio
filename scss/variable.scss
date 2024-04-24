@@ -6,30 +6,51 @@ $buttonColor: rgba(255, 83, 0, 0.9);
 $colorRed: rgba(255, 83, 0, 1);
 $colorBlack: rgb(0, 0, 0);
 $colorWhite: rgb(255, 255, 255);
+$colorOrange: rgba(255, 247, 244, 1);
+$colorGrey: rgba(123, 123, 123, 1);
+
+$colorBorderRed: rgba(255, 83, 0, 0.4);
+$colorBorderBlack: rgba(0, 0, 0, 0.1);
+
 
 
 
 $buttonFontText: Poppins;
 $fontText: Work Sans;
 
+$fontWeight400: 400;
 $fontWeight500: 500;
 $fontWeight600: 600;
+$fontWeight700: 700;
 
 //  параметры для десктопа 
 
+$sizeTextDecSpan: 16px;
 $sizeTextDec: 20px;
+$sizeTextDecHeader: 48px;
 $lineDec: 30px;
-$lineHeightDec:25px;
+$lineHeightDec: 25px;
+$lineHeightDecHeader: 59px;
+$lineHeightDecSpan: 24px;
+
+// width height for icons 
+
+$sizeIcons: 40px;
 
 // параметры для планшета
 
 $fontSizeTablet: 16px;
+$fontSizeHeaderTablet: 39px;
 $lineHeigthTablet: 24px;
+$lineHeigthHeaderTablet: 48px;
+
 
 //параметры для телефона
 
 $fontSizeMobil: 25px;
+$fontSizeMobilHeader: 31px;
 $lineHeightMobil: 30px;
+$lineHeightMobilHeader: 38px;
 
 //для логотипа
 
