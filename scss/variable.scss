@@ -23,39 +23,27 @@ $fontWeight500: 500;
 $fontWeight600: 600;
 $fontWeight700: 700;
 
-//  параметры для десктопа 
-
-$sizeTextDecSpan: 16px;
-$sizeTextDec: 20px;
-$sizeTextDecHeader: 48px;
-$lineDec: 30px;
-$lineHeightDec: 25px;
-$lineHeightDecHeader: 59px;
-$lineHeightDecSpan: 24px;
 
 // width height for icons 
 
 $sizeIcons: 40px;
 
-// параметры для планшета
+// size 
 
-$fontSizeTablet: 16px;
-$fontSizeHeaderTablet: 39px;
-$lineHeigthTablet: 24px;
-$lineHeigthHeaderTablet: 48px;
+$fontSizeXXS:16px;
+$fontSizeXS:20px;
+$fontSizeS:25px;
+$fontSizeM:30px;
+$fontSizeL:40px;
+$fontSizeXL:48px;
 
+//line-height
 
-//параметры для телефона
-
-$fontSizeMobil: 25px;
-$fontSizeMobilHeader: 31px;
-$lineHeightMobil: 30px;
-$lineHeightMobilHeader: 38px;
-
-//для логотипа
-
-$fontSizeLogo: 40px;
-$lineHeightLogo: 49px;
+$lineHeigthXS:25px;
+$lineHeigthS:30px;
+$lineHeigthM:40px;
+$lineHeigthL:50px;
+$lineHeigthXL:60px;
 
 
 

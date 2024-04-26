@@ -19,31 +19,62 @@ li {
     border-radius: 5px;
     color: $colorWhite;
     font-family: $buttonFontText;
-    line-height: $lineDec;
-    font-size: $sizeTextDec;
+    line-height: $lineHeigthXS;
+    font-size: $fontSizeXS;
     box-shadow: 4px 5px 15px 0px $colorBorderRed;
 
-
 }
+
+.heading-color {
+
+    &_red {
+        color: $colorRed;
+    }
+
+    ;
+
+    &_black {
+        color: $colorBlack;
+    }
+}
+
+.paragpaph {
+    color: $colorGrey;
+    font-weight: $fontWeight400;
+    font-size: $fontSizeXXS;
+    line-height: $lineHeigthXS;
+    font-family: $fontText;
+}
+
+
+
+// .heading-size{
+
+// }
 
 //desctop
 
 @media (min-width: 768px) and (max-width:1440px) {
+    .center {
+        padding-left: 10%;
+        padding-right: 10%;
+    }
+
     .navigation {
         @include flex(space-around, center);
         height: 100px;
-        width: 100%;
-        padding-left: 135px;
-        padding-left: 135px;
+        // width: 100%;
+        // padding-left: 135px;
+        // padding-left: 135px;
         background-color: $colorWhite;
-        box-shadow: 0px 1px 10px 0px rgba(0, 0, 0, 0.1);
+        box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.1);
 
         &__logo {
             display: flex;
             font-family: $fontText;
             font-weight: $fontWeight600;
-            font-size: $fontSizeLogo;
-            line-height: $lineHeightLogo;
+            font-size: $fontSizeL;
+            line-height: $lineHeigthL;
 
             &_red {
                 color: $colorRed;
@@ -66,11 +97,11 @@ li {
         }
 
         &__list-item {
-            line-height: $lineHeightDec;
+            line-height: $lineHeigthXS;
             font-weight: $fontWeight500;
             color: $colorBlack;
             font-family: $fontText;
-            font-size: $sizeTextDec;
+            font-size: $fontSizeXXS;
 
         }
     }
@@ -89,53 +120,47 @@ li {
         flex-shrink: 0;
     }
 
+    .heading-size {
+        font-family: $fontText;
+        font-size: $fontSizeXL;
+        line-height: $lineHeigthXL;
+        font-weight: $fontWeight700;
+        color: $colorBlack;
+    }
+
     .bannerMenu {
-        height: 735px;
-        width: 100%;
-        @include flex(flex-end, center);
+        position: relative;
+        // height: 735px;
+        padding-top: 135px;
+        padding-bottom: 135px;
+
+        @include flex(center, center);
         gap: 35px;
         background-color: $colorOrange;
 
         &__content {
             @include flex(center, flex-start);
             flex-direction: column;
-            width: 493px;
-
-            &__header {
-                font-family: $fontText;
-                font-weight: $fontWeight700;
-                font-size: $sizeTextDecHeader;
-                line-height: $lineHeightDecHeader;
-
-
-                &_red {
-                    color: $colorRed;
-                }
-
-                ;
-
-                &_black {
-                    color: $colorBlack;
-                }
-            }
-
-            ;
+            gap: 11px;
 
             &__text {
-                padding-top: 11px;
-                padding-bottom: 50px;
-                color: $colorGrey;
-                font-size: $sizeTextDecSpan;
-                line-height: $lineHeightDecSpan;
-                font-weight: $fontWeight400;
-                font-family: $fontText;
-
+                padding-bottom: 40px;
             }
 
-            ;
         }
 
-        &__Social-Icons {
+        ;
+
+        .banner__img {
+            max-width: 100%;
+            width: 50%;
+        }
+
+        .icons {
+            position: absolute;
+            right: 0;
+            top: 50%;
+            transform: translate(0, - 50%);
             display: flex;
             flex-direction: column;
             gap: 5px;
@@ -172,23 +197,23 @@ li {
 
     }
 
-    .banner__tablet,
-    .banner__mobil {
-        display: none;
-    }
-
 }
+
+
 
 //tablet
 
 @media (min-width: 376px) and (max-width:768px) {
+    .center {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
 
     .navigation {
         @include flex(space-around, center);
         height: 80px;
         gap: 28px;
         padding: 28px 28px 28px 40px;
-        width: 100%;
         background-color: $colorWhite;
         box-shadow: 0px 1px 10px 0px rgba(0, 0, 0, 0.1);
 
@@ -196,8 +221,8 @@ li {
             display: flex;
             font-family: $fontText;
             font-weight: $fontWeight600;
-            font-size: $fontSizeTablet;
-            line-height: $lineHeigthTablet;
+            font-size: $fontSizeS;
+            line-height: $lineHeigthS;
 
             &_red {
                 color: $colorRed;
@@ -220,8 +245,8 @@ li {
         }
 
         &__list-item {
-            line-height: $lineHeigthTablet;
-            font-size: $fontSizeTablet;
+            line-height: $lineHeigthXS;
+            font-size: $fontSizeXXS;
             font-weight: $fontWeight500;
             color: $colorBlack;
             font-family: $fontText;
@@ -242,55 +267,45 @@ li {
         flex-shrink: 0;
     }
 
+    .heading-size {
+        font-family: $fontText;
+        font-size: $fontSizeL;
+        line-height: $lineHeigthL;
+        font-weight: $fontWeight600;
+        color: $colorBlack;
+    }
+
     .bannerMenu {
-        height: 735px;
-        width: 100%;
-        @include flex(flex-end, center);
-        gap: 13px;
-        padding-left: 40px;
+        // padding-left: 10%;
+
+        position: relative;
+        height: 542px;
+        @include flex(center, center);
+        gap: 35px;
         background-color: $colorOrange;
 
         &__content {
             @include flex(center, flex-start);
             flex-direction: column;
-            width: 493px;
-
-
-            &__header {
-                font-family: $fontText;
-                font-weight: $fontWeight600;
-                font-size: $fontSizeHeaderTablet;
-                line-height: $lineHeigthHeaderTablet;
-
-
-                &_red {
-                    color: $colorRed;
-                }
-
-                ;
-
-                &_black {
-                    color: $colorBlack;
-                }
-            }
-
-            ;
+            gap: 11px;
 
             &__text {
-                padding-top: 11px;
-                padding-bottom: 50px;
-                color: $colorGrey;
-                font-size: $sizeTextDecSpan;
-                line-height: $lineHeightDecSpan;
-                font-weight: $fontWeight400;
-                font-family: $fontText;
-
+                padding-bottom: 15px;
             }
 
-            ;
         }
 
-        &__Social-Icons {
+        .banner__img {
+
+            max-width: 100%;
+            width: 40%;
+        }
+
+        .icons {
+            position: absolute;
+            right: 0;
+            top: 50%;
+            transform: translate(0, -50%);
             display: flex;
             flex-direction: column;
             gap: 5px;
@@ -326,28 +341,28 @@ li {
         }
 
     }
-
-    .banner__desctop,
-    .banner__mobil {
-        display: none;
-    }
-
 }
 
-//mobil
+// //mobil
 
 @media (max-width: 376px) {
-    * {
-        box-shadow: 0px
+    .center {
+        padding-left: 3%;
+        padding-right: 3%;
     }
 
-    ;
+    .heading-size {
+        font-family: $fontText;
+        font-size: $fontSizeM;
+        line-height: $lineHeigthM;
+        font-weight: $fontWeight600;
+        color: $colorBlack;
+    }
 
     .navigation {
         height: 50px;
         @include flex(space-between, center);
         padding: 13px;
-        width: 100%;
         background-color: $colorWhite;
         box-shadow: 0px 1px 10px 0px rgba(0, 0, 0, 0.1);
 
@@ -361,8 +376,8 @@ li {
             display: flex;
             font-family: $fontText;
             font-weight: $fontWeight500;
-            font-size: $fontSizeMobil;
-            line-height: $lineHeightMobil;
+            font-size: $fontSizeS;
+            line-height: $lineHeigthS;
 
 
             &_red {
@@ -395,8 +410,17 @@ li {
         @include button-reset
     }
 
+    .heading-size {
+        font-family: $fontText;
+        font-size: $fontSizeM;
+        line-height: $lineHeigthM;
+        font-weight: $fontWeight600;
+        color: $colorBlack;
+    }
+
     .bannerMenu {
-        height: 735px;
+        padding-top: 50px;
+        padding-bottom: 50px;
         width: 100%;
         @include flex(center, center);
         flex-direction: column-reverse;
@@ -406,52 +430,21 @@ li {
         &__content {
             @include flex(center, center);
             flex-direction: column;
-
-            &__header {
-                font-family: $fontText;
-                font-weight: $fontWeight600;
-                font-size: $fontSizeMobilHeader;
-                line-height: $lineHeightMobilHeader;
-                text-align: center;
-
-
-                &_red {
-                    color: $colorRed;
-                }
-
-                ;
-
-                &_black {
-                    color: $colorBlack;
-                }
-            }
-
-            ;
+            text-align: center;
 
             &__text {
-                padding-top: 11px;
-                padding-bottom: 50px;
-                color: $colorGrey;
-                font-size: $sizeTextDecSpan;
-                line-height: $lineHeightDecSpan;
-                font-weight: $fontWeight400;
-                font-family: $fontText;
                 text-align: center;
-
             }
 
-            ;
         }
 
-        &__Social-Icons {
+        .banner__img {
+            max-width: 100%;
+            width: 100%;
+        }
+
+        .icons {
             display: none;
         }
-
     }
-
-    .banner__desctop,
-    .banner__tablet {
-        display: none;
-    }
-
 }
