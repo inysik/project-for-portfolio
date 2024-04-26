@@ -3,12 +3,12 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 a,
 li {
     all: unset;
-    // background-color: aqua;
 
 }
 
@@ -19,30 +19,62 @@ li {
     border-radius: 5px;
     color: $colorWhite;
     font-family: $buttonFontText;
-    line-height: $lineDec;
-    font-size: $sizeTextDec;
-    box-shadow: rgba(255, 83, 0, 0.4) $buttonColor;
+    line-height: $lineHeigthXS;
+    font-size: $fontSizeXS;
+    box-shadow: 4px 5px 15px 0px $colorBorderRed;
 
 }
+
+.heading-color {
+
+    &_red {
+        color: $colorRed;
+    }
+
+    ;
+
+    &_black {
+        color: $colorBlack;
+    }
+}
+
+.paragpaph {
+    color: $colorGrey;
+    font-weight: $fontWeight400;
+    font-size: $fontSizeXXS;
+    line-height: $lineHeigthXS;
+    font-family: $fontText;
+}
+
+
+
+// .heading-size{
+
+// }
 
 //desctop
 
 @media (min-width: 768px) and (max-width:1440px) {
+    .center {
+        padding-left: 10%;
+        padding-right: 10%;
+    }
+
     .navigation {
         @include flex(space-around, center);
         height: 100px;
-        width: 100%;
-        padding-left: 135px;
-        padding-left: 135px;
+        // width: 100%;
+        // padding-left: 135px;
+        // padding-left: 135px;
         background-color: $colorWhite;
-        box-shadow: 0px 1px 10px 0px rgba(0, 0, 0, 0.1);
+        box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.1);
 
         &__logo {
             display: flex;
             font-family: $fontText;
             font-weight: $fontWeight600;
-            font-size: $fontSizeLogo;
-            line-height: $lineHeightLogo;
+            font-size: $fontSizeL;
+            line-height: $lineHeigthL;
 
             &_red {
                 color: $colorRed;
@@ -65,11 +97,11 @@ li {
         }
 
         &__list-item {
-            line-height: $lineHeightDec;
+            line-height: $lineHeigthXS;
             font-weight: $fontWeight500;
             color: $colorBlack;
             font-family: $fontText;
-            font-size: $sizeTextDec;
+            font-size: $fontSizeXXS;
 
         }
     }
@@ -87,17 +119,101 @@ li {
     li {
         flex-shrink: 0;
     }
+
+    .heading-size {
+        font-family: $fontText;
+        font-size: $fontSizeXL;
+        line-height: $lineHeigthXL;
+        font-weight: $fontWeight700;
+        color: $colorBlack;
+    }
+
+    .bannerMenu {
+        position: relative;
+        // height: 735px;
+        padding-top: 135px;
+        padding-bottom: 135px;
+
+        @include flex(center, center);
+        gap: 35px;
+        background-color: $colorOrange;
+
+        &__content {
+            @include flex(center, flex-start);
+            flex-direction: column;
+            gap: 11px;
+
+            &__text {
+                padding-bottom: 40px;
+            }
+
+        }
+
+        ;
+
+        .banner__img {
+            max-width: 100%;
+            width: 50%;
+        }
+
+        .icons {
+            position: absolute;
+            right: 0;
+            top: 50%;
+            transform: translate(0, - 50%);
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+
+            &__logos a {
+                @include flex(center, center);
+                width: $sizeIcons;
+                height: $sizeIcons;
+                background-color: $colorWhite;
+                box-shadow: 0px 1px 10px 0px $colorBorderBlack;
+                ;
+                transition: background-color 0.3s ease;
+            }
+
+            &__logos a:hover {
+                background-color: $colorRed;
+
+            }
+
+            &__logos a:hover svg path {
+                fill: $colorWhite;
+
+            }
+
+            &__logos_active {
+                @include flex(center, center);
+                width: $sizeIcons;
+                height: $sizeIcons;
+                background-color: $colorRed;
+                box-shadow: 4px 5px 15px 0px $colorBorderRed;
+
+            }
+        }
+
+    }
+
 }
+
+
 
 //tablet
 
 @media (min-width: 376px) and (max-width:768px) {
+    .center {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
     .navigation {
         @include flex(space-around, center);
         height: 80px;
         gap: 28px;
         padding: 28px 28px 28px 40px;
-        width: 100%;
         background-color: $colorWhite;
         box-shadow: 0px 1px 10px 0px rgba(0, 0, 0, 0.1);
 
@@ -105,8 +221,8 @@ li {
             display: flex;
             font-family: $fontText;
             font-weight: $fontWeight600;
-            font-size: $fontSizeTablet;
-            line-height: $lineHeigthTablet;
+            font-size: $fontSizeS;
+            line-height: $lineHeigthS;
 
             &_red {
                 color: $colorRed;
@@ -129,8 +245,8 @@ li {
         }
 
         &__list-item {
-            line-height: $lineHeigthTablet;
-            font-size: $fontSizeTablet;
+            line-height: $lineHeigthXS;
+            font-size: $fontSizeXXS;
             font-weight: $fontWeight500;
             color: $colorBlack;
             font-family: $fontText;
@@ -151,16 +267,102 @@ li {
         flex-shrink: 0;
     }
 
+    .heading-size {
+        font-family: $fontText;
+        font-size: $fontSizeL;
+        line-height: $lineHeigthL;
+        font-weight: $fontWeight600;
+        color: $colorBlack;
+    }
+
+    .bannerMenu {
+        // padding-left: 10%;
+
+        position: relative;
+        height: 542px;
+        @include flex(center, center);
+        gap: 35px;
+        background-color: $colorOrange;
+
+        &__content {
+            @include flex(center, flex-start);
+            flex-direction: column;
+            gap: 11px;
+
+            &__text {
+                padding-bottom: 15px;
+            }
+
+        }
+
+        .banner__img {
+
+            max-width: 100%;
+            width: 40%;
+        }
+
+        .icons {
+            position: absolute;
+            right: 0;
+            top: 50%;
+            transform: translate(0, -50%);
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+
+            &__logos a {
+                @include flex(center, center);
+                width: $sizeIcons;
+                height: $sizeIcons;
+                background-color: $colorWhite;
+                box-shadow: 0px 1px 10px 0px $colorBorderBlack;
+                ;
+                transition: background-color 0.3s ease;
+            }
+
+            &__logos a:hover {
+                background-color: $colorRed;
+
+            }
+
+            &__logos a:hover svg path {
+                fill: $colorWhite;
+
+            }
+
+            &__logos_active {
+                @include flex(center, center);
+                width: $sizeIcons;
+                height: $sizeIcons;
+                background-color: $colorRed;
+                box-shadow: 4px 5px 15px 0px $colorBorderRed;
+
+            }
+        }
+
+    }
 }
 
-//mobil
+// //mobil
 
 @media (max-width: 376px) {
+    .center {
+        padding-left: 3%;
+        padding-right: 3%;
+    }
+
+    .heading-size {
+        font-family: $fontText;
+        font-size: $fontSizeM;
+        line-height: $lineHeigthM;
+        font-weight: $fontWeight600;
+        color: $colorBlack;
+    }
+
     .navigation {
         height: 50px;
         @include flex(space-between, center);
-        margin: 13px;
-        width: 100%;
+        padding: 13px;
         background-color: $colorWhite;
         box-shadow: 0px 1px 10px 0px rgba(0, 0, 0, 0.1);
 
@@ -174,8 +376,8 @@ li {
             display: flex;
             font-family: $fontText;
             font-weight: $fontWeight500;
-            font-size: $fontSizeMobil;
-            line-height: $lineHeightMobil;
+            font-size: $fontSizeS;
+            line-height: $lineHeigthS;
 
 
             &_red {
@@ -206,5 +408,43 @@ li {
 
     button {
         @include button-reset
+    }
+
+    .heading-size {
+        font-family: $fontText;
+        font-size: $fontSizeM;
+        line-height: $lineHeigthM;
+        font-weight: $fontWeight600;
+        color: $colorBlack;
+    }
+
+    .bannerMenu {
+        padding-top: 50px;
+        padding-bottom: 50px;
+        width: 100%;
+        @include flex(center, center);
+        flex-direction: column-reverse;
+        gap: 13px;
+        background-color: $colorOrange;
+
+        &__content {
+            @include flex(center, center);
+            flex-direction: column;
+            text-align: center;
+
+            &__text {
+                text-align: center;
+            }
+
+        }
+
+        .banner__img {
+            max-width: 100%;
+            width: 100%;
+        }
+
+        .icons {
+            display: none;
+        }
     }
 }
